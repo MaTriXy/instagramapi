@@ -27,7 +27,7 @@ public class IGMedia implements Serializable{
     private String filter;
     @SerializedName("created_time")
     @Expose
-    private String createdTime;
+    private Long createdTime;
     @SerializedName("link")
     @Expose
     private String link;
@@ -58,6 +58,7 @@ public class IGMedia implements Serializable{
     @SerializedName("videos")
     @Expose
     private IGVideos videos;
+
 
     /**
      *
@@ -136,7 +137,7 @@ public class IGMedia implements Serializable{
      * @return
      * The createdTime
      */
-    public String getCreatedTime() {
+    public Long getCreatedTime() {
         return createdTime;
     }
 
@@ -145,7 +146,7 @@ public class IGMedia implements Serializable{
      * @param createdTime
      * The created_time
      */
-    public void setCreatedTime(String createdTime) {
+    public void setCreatedTime(Long createdTime) {
         this.createdTime = createdTime;
     }
 
@@ -328,5 +329,6 @@ public class IGMedia implements Serializable{
     public void setVideos(IGVideos videos) {
         this.videos = videos;
     }
+
 
 }
